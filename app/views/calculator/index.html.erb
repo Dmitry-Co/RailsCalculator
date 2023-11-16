@@ -1,2 +1,21 @@
-<h1>Calculator!</h1>
-<p>hey!</p>
+<h1>Hello Friend!!</h1>
+<p>Welcome to Rails Simple Calculator!!!</p>
+<p>Here you can make simple calculations and enjoy!</p>
+<p>Please use operators: (/), (*), (-), (+)</p>
+
+<%= form_tag(root_path, method: :get) do %>
+  <%= label_tag 'Enter the first numeric:' %>
+  <%= text_field_tag 'num1' %>
+
+  <%= label_tag 'Enter the operator:' %>
+  <%= text_field_tag 'eq' %>
+
+  <%= label_tag 'Enter the second numeric:' %>
+  <%= text_field_tag 'num2' %>
+
+  <%= submit_tag 'Calculate' %>
+<% end %>
+
+<% if @result %>
+  <p>Result: <%= @result %></p>
+<% end %>
